@@ -11,9 +11,9 @@
         public function index(){
             $data['usarios'] = $this -> User -> getData();
 
-            $this -> load -> view();
-            $this -> load -> view();
-            $this -> load -> view();
+            $this -> load -> view('');
+            $this -> load -> view('');
+            $this -> load -> view('');
         }
 
     }
