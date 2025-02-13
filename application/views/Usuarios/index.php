@@ -1,16 +1,17 @@
 <h2 class="text-center">Listado de Usuarios</h2>
 
 <div class="d-flex justify-content-end mb-3">
-    <a href="<?php echo site_url('Usuarios/agregar'); ?>" class="btn btn-primary">Agregar Usuario</a>
+    <a href="<?php echo site_url('Usuarios/nuevo'); ?>" class="btn btn-primary">Agregar Usuario</a>
 </div>
 
-<table class="table table-bordered">
+<table class="table table-bordered" id='table1'>
     <thead class="table-dark">
         <tr>
-            <th>Código</th>
+            <th>ID</th>
             <th>Nombre</th>
-            <th>Username</th>
-            <th>Email</th>
+            <th>Apellido</th>
+            <th>Usuario</th>
+            <th>Correo</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -19,7 +20,8 @@
             <?php foreach ($usuarios as $usuario): ?>
                 <tr>
                     <td><?php echo $usuario->codigo_usu; ?></td>
-                    <td><?php echo $usuario->nombre_usu . ' ' . $usuario->apellido_usu; ?></td>
+                    <td><?php echo $usuario->nombre_usu?></td>
+                    <td><?php echo $usuario->apellido_usu; ?></td>
                     <td><?php echo $usuario->username_usu; ?></td>
                     <td><?php echo $usuario->email_usu; ?></td>
                     <td>

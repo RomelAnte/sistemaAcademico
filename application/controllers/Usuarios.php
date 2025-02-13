@@ -15,6 +15,11 @@ class Usuarios extends CI_Controller {
         $this->load->view('footer', $data);
     }
 
+    public function nuevo(){
+        $this->load->view('header');
+        $this->load->view('Usuarios/agregar');
+        $this->load->view('footer');
+    }
     /*public function agregar() {
         $data = array(
             'codigo_usu' => 'U001',
