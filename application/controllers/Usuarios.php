@@ -9,11 +9,11 @@
         }
 
         public function index(){
-            $data['usarios'] = $this -> User -> getData();
+            $data['usarios'] = $this -> Usuario -> getData();
 
-            $this -> load -> view('');
-            $this -> load -> view('');
-            $this -> load -> view('');
+            $this -> load -> view('header');
+            $this -> load -> view('index');
+            $this -> load -> view('footer');
         }
 
     }
