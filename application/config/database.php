@@ -77,7 +77,7 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'Admin2023@',
 	'database' => 'seguimientov3',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -94,3 +94,5 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+/**sudo systemctl stop libvirtd
+sudo systemctl disable libvirtd */
