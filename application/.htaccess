@@ -1,6 +1,7 @@
 <IfModule authz_core_module>
-    Require all denied
+    Require ip 172.16.114.116
 </IfModule>
 <IfModule !authz_core_module>
+    Allow from 172.16.114.116
     Deny from all
 </IfModule>
