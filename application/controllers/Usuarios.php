@@ -1,19 +1,21 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Usuario extends CI_Controller {
+class Usuarios extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('Usuario_model');
+        $this->load->model('Usuario');
     }
 
     public function index() {
-        $data['usuarios'] = $this->Usuario_model->getAll();
-        $this->load->view('usuario_view', $data);
+        $data['usuarios'] = $this->Usuario->getAll();
+        $this->load->view('header', $data);
+        $this->load->view('Usuarios/index', $data);
+        $this->load->view('footer', $data);
     }
 
-    public function agregar() {
+    /*public function agregar() {
         $data = array(
             'codigo_usu' => 'U001',
             'cedula_usu' => '1723456789',
@@ -31,7 +33,7 @@ class Usuario extends CI_Controller {
             'cv_usu' => 'juan_cv.pdf'
         );
 
-        if ($this->Usuario_model->insert($data)) {
+        if ($this->Usuario->insert($data)) {
             echo "Usuario agregado correctamente.";
         } else {
             echo "Error al agregar el usuario.";
@@ -39,11 +41,11 @@ class Usuario extends CI_Controller {
     }
 
     public function eliminar($id) {
-        if ($this->Usuario_model->delete($id)) {
+        if ($this->Usuario->delete($id)) {
             echo "Usuario eliminado.";
         } else {
             echo "Error al eliminar.";
         }
-    }
+    }*/
 }
 ?>
