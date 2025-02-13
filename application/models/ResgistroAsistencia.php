@@ -1,46 +1,54 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Asistencia extends CI_Model {
+class Registroasistencia extends CI_Model {
 
     public function __construct() {
         parent::__construct();
     }
 
-    // Obtener todas las asistencias
+    // Obtener todos los registros de asistencia
     public function getAll() {
-        $query = $this->db->get('asistencia');
+        $query = $this->db->get('registroasistencia');
         return $query->num_rows() > 0 ? $query->result() : false;
     }
 
-    // Insertar una nueva asistencia
+    // Insertar un nuevo registro de asistencia
     public function insert($data) {
-        return $this->db->insert('asistencia', $data);
+        return $this->db->insert('registroasistencia', $data);
     }
 
-    // Actualizar una asistencia por ID
+    // Actualizar un registro de asistencia por ID
     public function update($id, $data) {
-        $this->db->where('codigo_asi', $id);
-        return $this->db->update('asistencia', $data);
+        $this->db->where('codigo_ra', $id);
+        return $this->db->update('registroasistencia', $data);
     }
 
-    // Obtener una asistencia por ID
+    // Obtener un registro de asistencia por ID
     public function getById($id) {
-        $this->db->where('codigo_asi', $id);
-        $query = $this->db->get('asistencia');
+        $this->db->where('codigo_ra', $id);
+        $query = $this->db->get('registroasistencia');
         return $query->num_rows() > 0 ? $query->row() : false;
     }
 
-    // Eliminar una asistencia por ID
+    // Eliminar un registro de asistencia por ID
     public function delete($id) {
-        $this->db->where('codigo_asi', $id);
-        return $this->db->delete('asistencia');
+        $this->db->where('codigo_ra', $id);
+        return $this->db->delete('registroasistencia');
     }
 
-    // Obtener asistencias por código de materia
-    public function getByCodigoMat($codigo_mat) {
-        $this->db->where('codigo_mat', $codigo_mat);
-        $query = $this->db->get('asistencia');
+    // Obtener registros de asistencia por código de asistencia
+    public function getByAsistencia($codigo_asi) {
+        $this->db->where('codigo_asi', $codigo_asi);
+        $query = $this->db->get('registroasistencia');
+        return $query->num_rows() > 0 ? $query->result() : false;
+    }
+
+    // Obtener registros de asistencia por estudiante
+    public function getByEstudiante($codigo_est) {
+        $this->db->where('codigo_est', $codigo_est);
+        $query = $this->db->get('registroasistencia');
         return $query->num_rows() > 0 ? $query->result() : false;
     }
 }
