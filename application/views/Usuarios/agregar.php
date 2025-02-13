@@ -1,6 +1,6 @@
 <h2 class="text-center">Nuevo Usuario</h2>
 <br>
-<form action="" method="post" enctype="multipart/form-data">
+<form action="<?php echo site_url('Usuarios/agregar') ?>" method="post" enctype="multipart/form-data">
     <div class='row'>
         <div class='col-md-4'>
             <label for="cedula_usu" class=form-label>Cédula:</label>

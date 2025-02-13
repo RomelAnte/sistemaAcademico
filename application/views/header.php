@@ -19,8 +19,7 @@
     <!--DataTable-->
 	<link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.css" />
 	<script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
-    <script src='../../assets/js/main.js'></script>
-
+    
     <title>Document</title>
 </head>
 <body>
